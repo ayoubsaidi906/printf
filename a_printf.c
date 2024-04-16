@@ -7,6 +7,9 @@
  */
 int _printf(const char *format, ...)
 {
+	int len, len2;
+	len = _printf("%d", INT_MIN);
+	len2 = printf("%d", INT_MIN);
 	int i;
 	va_list arg;
 
