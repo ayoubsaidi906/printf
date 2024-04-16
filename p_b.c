@@ -5,7 +5,7 @@
  * @val: parameter.
  * Return: integer
  */
-int print_bin(va_list val)
+int print_mybin(va_list val)
 {
 	int flag = 0;
 	int cont = 0;
