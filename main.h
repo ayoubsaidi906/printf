@@ -10,8 +10,7 @@ int pu_s(const char *b);
 void handle_for(va_list arg, char specifier, int *i);
 int _printf(const char *format, ...);
 int p_n(int ayoub);
-int print_mybin(va_list val)
-
+int print_bin(va_list val);
 
 #endif
 
