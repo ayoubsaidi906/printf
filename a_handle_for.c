@@ -16,6 +16,8 @@ void handle_for(va_list arg, char specifier, int *i)
 				(*i) += _putchar(va_arg(arg, int));
 				break;
 		case 'i':
+		                (*i) += _putchar(var_arg(arg, int));
+		                break;
 		case 'd':
 				(*i) += p_n(va_arg(arg, int));
 				break;
