@@ -1,27 +1,34 @@
-#include"main.h"
+#include "main.h"
+
 /**
- * p_b - convert from decimal to binary
- * @a : number to convert
- * Return: binary
+ * print_bin - prints binary number.
+ * @val: parameter.
+ * Return: integer
  */
-
-int p_b(unsigned int a)
+int print_bin(va_list val)
 {
-	int i = 0;
+	int flag = 0;
+	int cont = 0;
+	int i, a = 1, b;
+	unsigned int num = va_arg(val, unsigned int);
+	unsigned int p;
 
-	if (a == 0)
+	for (i = 0; i < 32; i++)
 	{
-		_putchar('0');
-		i++;
-	}
-	else
-	{
-		if (a < 1)
+		p = ((a << (31 - i)) & num);
+		if (p >> (31 - i))
+			flag = 1;
+		if (flag)
 		{
-			i += p_b(a / 2);
+			b = p >> (31 - i);
+			_putchar(b + 48);
+			cont++;
 		}
-		_putchar((a % 2) + '0');
-		i++;
 	}
-	return (i);
+	if (cont == 0)
+	{
+		cont++;
+		_putchar('0');
+	}
+	return (cont);
 }
