@@ -11,7 +11,7 @@ void handle_for(va_list arg, char specifier, int *i);
 int  p_b(unsigned int a);
 int _printf(const char *format, ...);
 int p_n(int ayoub);
-int print_bin(va_list val)
+int print_mybin(va_list val)
 
 
 #endif
