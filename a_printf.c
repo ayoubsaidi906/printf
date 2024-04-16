@@ -8,14 +8,17 @@
 int _printf(const char *format, ...)
 {
 	int len, len2;
+
 	len = _printf("%d", INT_MIN);
 	len2 = printf("%d", INT_MIN);
-	int i;
-	va_list arg;
-
-	i = 0;
-
-	va_start(arg, format);
+	fflush(stdout);
+	if (len != len2)
+	{
+		printf("Lengths differ.\n");
+		fflush(stdout);
+		return (1);
+	}
+	return (0);
 
 if (!format || (format[0] == '%' && (!format[1] || format[1] == ' ')))
 {
